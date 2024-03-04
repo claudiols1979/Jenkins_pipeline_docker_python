@@ -9,6 +9,11 @@ pipeline {
             steps {
                 sh 'python --version'
             }
+        post {
+            failure {
+                echo "Python not detected"
+            }
+        }
         }
         stage('disk size') {
             steps {
