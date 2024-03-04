@@ -14,12 +14,13 @@ pipeline {
             steps {
                 sh 'df -h'
             }
-        }
         post {
             success {
-                echo "stages succeded"
+                echo "disk sizes check"
             }
         }
+
+        }        
     }
     post {
         always {
@@ -27,3 +28,5 @@ pipeline {
         }
     }
 }
+
+
