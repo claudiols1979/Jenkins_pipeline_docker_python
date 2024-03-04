@@ -15,5 +15,15 @@ pipeline {
                 sh 'df -h'
             }
         }
+        post {
+            success {
+                echo "stages succeded"
+            }
+        }
+    }
+    post {
+        always {
+            echo "Send notifications for result: ${currentBuild.result}"
+        }
     }
 }
