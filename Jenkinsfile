@@ -6,5 +6,10 @@ pipeline {
                 sh 'python --version'
             }
         }
+        stage('disk size') {
+            steps {
+                sh 'df -h'
+            }
+        }
     }
 }
